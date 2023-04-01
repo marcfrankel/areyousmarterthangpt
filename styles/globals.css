@@ -1,16 +1,43 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/public/fonts/Roboto/Roboto-Regular.ttf') format('tff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* optional, for better performance */
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: var(--primary);
+    padding: 16px 24px;
+    border-radius: 10px;
+    color: white;
+    font-size: 32px;
+    /* Stop text from being selectable */
+    user-select: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    /* Darken the button var(--primary) on hover */
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+.button:active {
+    transform: scale(0.95);
 }
