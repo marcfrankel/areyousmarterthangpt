@@ -30,24 +30,30 @@ const LottieAnimation = () => {
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <title>Are You Smarter Than GPT?</title>
+                <meta
+                    name='description'
+                    content='A daily quiz to see if you are smarter than the current GPT model from OpenAI.'
+                />
                 <link rel='icon' href='/favicon.ico' />
+                <script
+                    data-name='BMC-Widget'
+                    data-cfasync='false'
+                    src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
+                    data-id='dev.marc'
+                    data-description='Support me on Buy me a coffee!'
+                    data-message='Thanks for enjoying the quiz!'
+                    data-color='#40DCA5'
+                    data-position='Right'
+                    data-x_margin='18'
+                    data-y_margin='18'
+                ></script>
             </Head>
-
             <main className={styles.main}>
                 <LottieAnimation />
-                <h1
-                    className={[
-                        styles.title,
-                        {
-                            marginBottom: 24,
-                        },
-                    ]}
-                >
-                    Are you smarter than GPT?
-                </h1>
+                <h1 className={styles.title}>Are you smarter than GPT?</h1>
 
                 <Link href='quiz'>
                     <div className={'button'} onClick={() => {}}>
@@ -55,10 +61,6 @@ export default function Home() {
                     </div>
                 </Link>
             </main>
-
-            <footer className={styles.footer}>
-                A project by Marc and Alison
-            </footer>
-        </div>
+        </>
     );
 }
