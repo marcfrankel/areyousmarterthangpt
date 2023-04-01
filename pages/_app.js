@@ -1,8 +1,6 @@
-import Link from 'next/link';
 import '../styles/globals.css';
 import '../styles/theme.css';
-import Image from 'next/image';
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -23,6 +21,7 @@ function MyApp({ Component, pageProps }) {
                     data-y_margin='18'
                 ></script>
             </footer>
+            <Analytics />
         </container>
     );
 }
